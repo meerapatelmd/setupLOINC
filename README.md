@@ -1,27 +1,18 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # setupLOINC
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CRAN status](https://www.r-pkg.org/badges/version/setupLOINC)](https://CRAN.R-project.org/package=setupLOINC)
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/setupLOINC)](https://CRAN.R-project.org/package=setupLOINC)
 <!-- badges: end -->
 
-The goal of setupLOINC is to instantiate the latest LOINC Table File (CSV) in 
-Postgres.
+The goal of setupLOINC is to instantiate the latest LOINC Table File
+(CSV) in Postgres.
 
 ## Installation
 
@@ -36,7 +27,7 @@ install_github("meerapatelmd/setupLOINC")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example,eval=FALSE}
+``` r
 library(setupLOINC)
 run_setup(conn = conn, 
           schema = "loinc", 
