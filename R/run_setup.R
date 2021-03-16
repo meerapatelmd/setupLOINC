@@ -10,8 +10,8 @@
 #' @param csv_path Path to the unpacked LOINC Table File csv files.
 #' @param log_schema Schema for the table that logs the process, Default: 'public'
 #' @param log_table_name Name of log table, Default: 'setup_loinc_log'
-#' @param log_csv_version (Required) \href{LOINC Table File (CSV)}{https://loinc.org/downloads/loinc-table/} Version.
-#' @param log_release_date (Required) \href{LOINC Table File (CSV)}{https://loinc.org/downloads/loinc-table/} Release Date.
+#' @param log_csv_version (Required) \href{https://loinc.org/downloads/loinc-table/}{LOINC Table File (CSV)} Version.
+#' @param log_release_date (Required) \href{https://loinc.org/downloads/loinc-table/}{LOINC Table File (CSV)} Release Date.
 #' @seealso
 #'  \code{\link[pg13]{schema_exists}},\code{\link[pg13]{drop_cascade}},\code{\link[pg13]{send}},\code{\link[pg13]{ls_tables}},\code{\link[pg13]{c("query", "query")}},\code{\link[pg13]{render_row_count}},\code{\link[pg13]{table_exists}},\code{\link[pg13]{read_table}},\code{\link[pg13]{drop_table}},\code{\link[pg13]{write_table}}
 #'  \code{\link[SqlRender]{render}}

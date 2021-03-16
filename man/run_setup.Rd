@@ -28,9 +28,9 @@ run_setup(
 
 \item{log_table_name}{Name of log table, Default: 'setup_loinc_log'}
 
-\item{log_csv_version}{(Required) \href{LOINC Table File (CSV)}{https://loinc.org/downloads/loinc-table/} Version.}
+\item{log_csv_version}{(Required) \href{https://loinc.org/downloads/loinc-table/}{LOINC Table File (CSV)} Version.}
 
-\item{log_release_date}{(Required) \href{LOINC Table File (CSV)}{https://loinc.org/downloads/loinc-table/} Release Date.}
+\item{log_release_date}{(Required) \href{https://loinc.org/downloads/loinc-table/}{LOINC Table File (CSV)} Release Date.}
 }
 \description{
 The CSV files unpacked from a LOINC Table File (CSV) download from
