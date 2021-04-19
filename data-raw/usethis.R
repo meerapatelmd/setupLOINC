@@ -34,4 +34,5 @@ names(LABCORP_MAP) <- c("Labcorp Test Compendium with LOINC 3.23.21",
                         "LOINC-codes_arup")
 
 
-
+usethis::use_data(LABCORP_MAP,
+                  overwrite=TRUE)

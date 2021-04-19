@@ -1,6 +1,6 @@
 Package: setupLOINC
 Title: Load LOINC Into Postgres
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: 
     person(given = "First",
            family = "Last",
@@ -18,3 +18,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
     magrittr
+Depends: 
+    R (>= 2.10)
