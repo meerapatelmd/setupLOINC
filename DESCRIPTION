@@ -2,11 +2,10 @@ Package: setupLOINC
 Title: Load LOINC Into Postgres
 Version: 0.0.1
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Meera",
+           family = "Patel",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "patelmeeray@gmail.com")
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Suggests: 
