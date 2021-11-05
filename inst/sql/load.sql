@@ -1,3 +1,4 @@
+SET search_path TO {schema};
 DROP TABLE IF EXISTS answerlist;
 CREATE TABLE answerlist (
 answerlistid varchar(255),
@@ -40,7 +41,7 @@ description text,
 score varchar(255)
 );
 
-COPY answerlist FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/AnswerFile/AnswerList.csv' CSV HEADER;
+COPY answerlist FROM '{path_to_csvs}/AccessoryFiles/AnswerFile/AnswerList.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS answerlist;
 CREATE TABLE answerlist (
@@ -84,7 +85,7 @@ description text,
 score varchar(255)
 );
 
-COPY answerlist FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/PanelsAndForms/AnswerList.csv' CSV HEADER;
+COPY answerlist FROM '{path_to_csvs}/AccessoryFiles/PanelsAndForms/AnswerList.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS consumername;
 CREATE TABLE consumername (
@@ -92,7 +93,7 @@ loincnumber varchar(255),
 consumername varchar(255)
 );
 
-COPY consumername FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/ConsumerName/ConsumerName.csv' CSV HEADER;
+COPY consumername FROM '{path_to_csvs}/AccessoryFiles/ConsumerName/ConsumerName.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS deat24linguisticvariant;
 CREATE TABLE deat24linguisticvariant (
@@ -110,7 +111,7 @@ relatednames2 varchar(255),
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY deat24linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/deAT24LinguisticVariant.csv' CSV HEADER;
+COPY deat24linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/deAT24LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS dede15linguisticvariant;
 CREATE TABLE dede15linguisticvariant (
@@ -128,7 +129,7 @@ relatednames2 varchar(255),
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY dede15linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/deDE15LinguisticVariant.csv' CSV HEADER;
+COPY dede15linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/deDE15LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS documentontology;
 CREATE TABLE documentontology (
@@ -139,7 +140,7 @@ partsequenceorder varchar(255),
 partname varchar(255)
 );
 
-COPY documentontology FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/DocumentOntology/DocumentOntology.csv' CSV HEADER;
+COPY documentontology FROM '{path_to_csvs}/AccessoryFiles/DocumentOntology/DocumentOntology.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS elgr17linguisticvariant;
 CREATE TABLE elgr17linguisticvariant (
@@ -157,7 +158,7 @@ relatednames2 varchar(255),
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY elgr17linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/elGR17LinguisticVariant.csv' CSV HEADER;
+COPY elgr17linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/elGR17LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS esar7linguisticvariant;
 CREATE TABLE esar7linguisticvariant (
@@ -175,7 +176,7 @@ relatednames2 varchar(255),
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY esar7linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/esAR7LinguisticVariant.csv' CSV HEADER;
+COPY esar7linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/esAR7LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS eses12linguisticvariant;
 CREATE TABLE eses12linguisticvariant (
@@ -193,7 +194,7 @@ relatednames2 varchar(255),
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY eses12linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/esES12LinguisticVariant.csv' CSV HEADER;
+COPY eses12linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/esES12LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS etee10linguisticvariant;
 CREATE TABLE etee10linguisticvariant (
@@ -211,7 +212,7 @@ relatednames2 varchar(255),
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY etee10linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/etEE10LinguisticVariant.csv' CSV HEADER;
+COPY etee10linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/etEE10LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS frbe23linguisticvariant;
 CREATE TABLE frbe23linguisticvariant (
@@ -229,7 +230,7 @@ relatednames2 varchar(255),
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY frbe23linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/frBE23LinguisticVariant.csv' CSV HEADER;
+COPY frbe23linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/frBE23LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS frca8linguisticvariant;
 CREATE TABLE frca8linguisticvariant (
@@ -247,7 +248,7 @@ relatednames2 varchar(255),
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY frca8linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/frCA8LinguisticVariant.csv' CSV HEADER;
+COPY frca8linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/frCA8LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS frfr18linguisticvariant;
 CREATE TABLE frfr18linguisticvariant (
@@ -265,7 +266,7 @@ relatednames2 varchar(255),
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY frfr18linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/frFR18LinguisticVariant.csv' CSV HEADER;
+COPY frfr18linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/frFR18LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS imagingdocumentcodes;
 CREATE TABLE imagingdocumentcodes (
@@ -273,7 +274,7 @@ loinc_num varchar(255),
 long_common_name varchar(255)
 );
 
-COPY imagingdocumentcodes FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/ImagingDocuments/ImagingDocumentCodes.csv' CSV HEADER;
+COPY imagingdocumentcodes FROM '{path_to_csvs}/AccessoryFiles/ImagingDocuments/ImagingDocumentCodes.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS itit16linguisticvariant;
 CREATE TABLE itit16linguisticvariant (
@@ -291,7 +292,7 @@ relatednames2 text,
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY itit16linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/itIT16LinguisticVariant.csv' CSV HEADER;
+COPY itit16linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/itIT16LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS kokr13linguisticvariant;
 CREATE TABLE kokr13linguisticvariant (
@@ -309,7 +310,7 @@ relatednames2 varchar(255),
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY kokr13linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/koKR13LinguisticVariant.csv' CSV HEADER;
+COPY kokr13linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/koKR13LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS linguisticvariants;
 CREATE TABLE linguisticvariants (
@@ -320,7 +321,7 @@ language_name varchar(255),
 producer varchar(255)
 );
 
-COPY linguisticvariants FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/LinguisticVariants.csv' CSV HEADER;
+COPY linguisticvariants FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/LinguisticVariants.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loinc;
 CREATE TABLE loinc (
@@ -416,7 +417,7 @@ validhl7attachmentrequest varchar(255),
 displayname varchar(255)
 );
 
-COPY loinc FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/PanelsAndForms/Loinc.csv' CSV HEADER;
+COPY loinc FROM '{path_to_csvs}/AccessoryFiles/PanelsAndForms/Loinc.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loinc;
 CREATE TABLE loinc (
@@ -512,7 +513,7 @@ validhl7attachmentrequest varchar(255),
 displayname varchar(255)
 );
 
-COPY loinc FROM '/Users/mpatel/Desktop/Loinc_2.71/LoincTable/Loinc.csv' CSV HEADER;
+COPY loinc FROM '{path_to_csvs}/LoincTable/Loinc.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincanswerlistlink;
 CREATE TABLE loincanswerlistlink (
@@ -530,7 +531,7 @@ answerlistlinktype varchar(255),
 applicablecontext varchar(255)
 );
 
-COPY loincanswerlistlink FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/AnswerFile/LoincAnswerListLink.csv' CSV HEADER;
+COPY loincanswerlistlink FROM '{path_to_csvs}/AccessoryFiles/AnswerFile/LoincAnswerListLink.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincanswerlistlink;
 CREATE TABLE loincanswerlistlink (
@@ -548,7 +549,7 @@ answerlistlinktype varchar(255),
 applicablecontext varchar(255)
 );
 
-COPY loincanswerlistlink FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/PanelsAndForms/LoincAnswerListLink.csv' CSV HEADER;
+COPY loincanswerlistlink FROM '{path_to_csvs}/AccessoryFiles/PanelsAndForms/LoincAnswerListLink.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincchangesnapshot;
 CREATE TABLE loincchangesnapshot (
@@ -560,7 +561,7 @@ valuecurrent varchar(255),
 changereason varchar(255)
 );
 
-COPY loincchangesnapshot FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/ChangeSnapshot/LoincChangeSnapshot.csv' CSV HEADER;
+COPY loincchangesnapshot FROM '{path_to_csvs}/AccessoryFiles/ChangeSnapshot/LoincChangeSnapshot.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincgroup;
 CREATE TABLE loincgroup (
@@ -572,7 +573,7 @@ status varchar(255),
 versionfirstreleased varchar(255)
 );
 
-COPY loincgroup FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/GroupFile/Group.csv' CSV HEADER;
+COPY loincgroup FROM '{path_to_csvs}/AccessoryFiles/GroupFile/Group.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincgroupattributes;
 CREATE TABLE loincgroupattributes (
@@ -582,7 +583,7 @@ type varchar(255),
 value text
 );
 
-COPY loincgroupattributes FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/GroupFile/GroupAttributes.csv' CSV HEADER;
+COPY loincgroupattributes FROM '{path_to_csvs}/AccessoryFiles/GroupFile/GroupAttributes.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincgrouploincterms;
 CREATE TABLE loincgrouploincterms (
@@ -593,7 +594,7 @@ loincnumber varchar(255),
 longcommonname varchar(255)
 );
 
-COPY loincgrouploincterms FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/GroupFile/GroupLoincTerms.csv' CSV HEADER;
+COPY loincgrouploincterms FROM '{path_to_csvs}/AccessoryFiles/GroupFile/GroupLoincTerms.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincieeemedicaldevicecodemappingtable;
 CREATE TABLE loincieeemedicaldevicecodemappingtable (
@@ -604,7 +605,7 @@ ieee_refid varchar(255),
 equivalence varchar(255)
 );
 
-COPY loincieeemedicaldevicecodemappingtable FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LoincIeeeMedicalDeviceCodeMappingTable/LoincIeeeMedicalDeviceCodeMappingTable.csv' CSV HEADER;
+COPY loincieeemedicaldevicecodemappingtable FROM '{path_to_csvs}/AccessoryFiles/LoincIeeeMedicalDeviceCodeMappingTable/LoincIeeeMedicalDeviceCodeMappingTable.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincparentgroup;
 CREATE TABLE loincparentgroup (
@@ -613,7 +614,7 @@ parentloincgroup varchar(255),
 status varchar(255)
 );
 
-COPY loincparentgroup FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/GroupFile/ParentGroup.csv' CSV HEADER;
+COPY loincparentgroup FROM '{path_to_csvs}/AccessoryFiles/GroupFile/ParentGroup.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincparentgroupattributes;
 CREATE TABLE loincparentgroupattributes (
@@ -622,7 +623,7 @@ type varchar(255),
 value text
 );
 
-COPY loincparentgroupattributes FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/GroupFile/ParentGroupAttributes.csv' CSV HEADER;
+COPY loincparentgroupattributes FROM '{path_to_csvs}/AccessoryFiles/GroupFile/ParentGroupAttributes.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincpartlink_primary;
 CREATE TABLE loincpartlink_primary (
@@ -636,7 +637,7 @@ linktypename varchar(255),
 property varchar(255)
 );
 
-COPY loincpartlink_primary FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/PartFile/LoincPartLink_Primary.csv' CSV HEADER;
+COPY loincpartlink_primary FROM '{path_to_csvs}/AccessoryFiles/PartFile/LoincPartLink_Primary.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincpartlink_supplementary;
 CREATE TABLE loincpartlink_supplementary (
@@ -650,7 +651,7 @@ linktypename varchar(255),
 property varchar(255)
 );
 
-COPY loincpartlink_supplementary FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/PartFile/LoincPartLink_Supplementary.csv' CSV HEADER;
+COPY loincpartlink_supplementary FROM '{path_to_csvs}/AccessoryFiles/PartFile/LoincPartLink_Supplementary.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincrsnaradiologyplaybook;
 CREATE TABLE loincrsnaradiologyplaybook (
@@ -666,7 +667,7 @@ rpid varchar(255),
 longname varchar(255)
 );
 
-COPY loincrsnaradiologyplaybook FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv' CSV HEADER;
+COPY loincrsnaradiologyplaybook FROM '{path_to_csvs}/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loinctablecore;
 CREATE TABLE loinctablecore (
@@ -687,7 +688,7 @@ versionfirstreleased varchar(255),
 versionlastchanged varchar(255)
 );
 
-COPY loinctablecore FROM '/Users/mpatel/Desktop/Loinc_2.71/LoincTableCore/LoincTableCore.csv' CSV HEADER;
+COPY loinctablecore FROM '{path_to_csvs}/LoincTableCore/LoincTableCore.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loincuniversallabordersvalueset;
 CREATE TABLE loincuniversallabordersvalueset (
@@ -696,7 +697,7 @@ long_common_name varchar(255),
 order_obs varchar(255)
 );
 
-COPY loincuniversallabordersvalueset FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LoincUniversalLabOrdersValueSet/LoincUniversalLabOrdersValueSet.csv' CSV HEADER;
+COPY loincuniversallabordersvalueset FROM '{path_to_csvs}/AccessoryFiles/LoincUniversalLabOrdersValueSet/LoincUniversalLabOrdersValueSet.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS mapto;
 CREATE TABLE mapto (
@@ -708,7 +709,7 @@ map_to varchar(255),
 comment varchar(255)
 );
 
-COPY mapto FROM '/Users/mpatel/Desktop/Loinc_2.71/LoincTable/MapTo.csv' CSV HEADER;
+COPY mapto FROM '{path_to_csvs}/LoincTable/MapTo.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS mapto;
 CREATE TABLE mapto (
@@ -720,7 +721,7 @@ map_to varchar(255),
 comment varchar(255)
 );
 
-COPY mapto FROM '/Users/mpatel/Desktop/Loinc_2.71/LoincTableCore/MapTo.csv' CSV HEADER;
+COPY mapto FROM '{path_to_csvs}/LoincTableCore/MapTo.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS multiaxialhierarchy;
 CREATE TABLE multiaxialhierarchy (
@@ -731,7 +732,7 @@ code varchar(255),
 code_text varchar(255)
 );
 
-COPY multiaxialhierarchy FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/MultiAxialHierarchy/MultiAxialHierarchy.csv' CSV HEADER;
+COPY multiaxialhierarchy FROM '{path_to_csvs}/AccessoryFiles/MultiAxialHierarchy/MultiAxialHierarchy.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS nlnl22linguisticvariant;
 CREATE TABLE nlnl22linguisticvariant (
@@ -749,7 +750,7 @@ relatednames2 text,
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY nlnl22linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/nlNL22LinguisticVariant.csv' CSV HEADER;
+COPY nlnl22linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/nlNL22LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS panelsandforms;
 CREATE TABLE panelsandforms (
@@ -783,7 +784,7 @@ answerlisttypeoverride varchar(255),
 external_copyright_notice text
 );
 
-COPY panelsandforms FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/PanelsAndForms/PanelsAndForms.csv' CSV HEADER;
+COPY panelsandforms FROM '{path_to_csvs}/AccessoryFiles/PanelsAndForms/PanelsAndForms.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS part;
 CREATE TABLE part (
@@ -794,7 +795,7 @@ partdisplayname varchar(255),
 status varchar(255)
 );
 
-COPY part FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/PartFile/Part.csv' CSV HEADER;
+COPY part FROM '{path_to_csvs}/AccessoryFiles/PartFile/Part.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS partchangesnapshot;
 CREATE TABLE partchangesnapshot (
@@ -806,7 +807,7 @@ valuecurrent varchar(255),
 changereason varchar(255)
 );
 
-COPY partchangesnapshot FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/ChangeSnapshot/PartChangeSnapshot.csv' CSV HEADER;
+COPY partchangesnapshot FROM '{path_to_csvs}/AccessoryFiles/ChangeSnapshot/PartChangeSnapshot.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS partrelatedcodemapping;
 CREATE TABLE partrelatedcodemapping (
@@ -822,7 +823,7 @@ extcodesystemversion varchar(255),
 extcodesystemcopyrightnotice text
 );
 
-COPY partrelatedcodemapping FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/PartFile/PartRelatedCodeMapping.csv' CSV HEADER;
+COPY partrelatedcodemapping FROM '{path_to_csvs}/AccessoryFiles/PartFile/PartRelatedCodeMapping.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS ptbr11linguisticvariant;
 CREATE TABLE ptbr11linguisticvariant (
@@ -840,7 +841,7 @@ relatednames2 text,
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY ptbr11linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/ptBR11LinguisticVariant.csv' CSV HEADER;
+COPY ptbr11linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/ptBR11LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS ruru20linguisticvariant;
 CREATE TABLE ruru20linguisticvariant (
@@ -858,7 +859,7 @@ relatednames2 text,
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY ruru20linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/ruRU20LinguisticVariant.csv' CSV HEADER;
+COPY ruru20linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/ruRU20LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS sourceorganization;
 CREATE TABLE sourceorganization (
@@ -870,7 +871,7 @@ terms_of_use text,
 url varchar(255)
 );
 
-COPY sourceorganization FROM '/Users/mpatel/Desktop/Loinc_2.71/LoincTable/SourceOrganization.csv' CSV HEADER;
+COPY sourceorganization FROM '{path_to_csvs}/LoincTable/SourceOrganization.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS trtr19linguisticvariant;
 CREATE TABLE trtr19linguisticvariant (
@@ -888,7 +889,7 @@ relatednames2 varchar(255),
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY trtr19linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/trTR19LinguisticVariant.csv' CSV HEADER;
+COPY trtr19linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/trTR19LinguisticVariant.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS updates;
 CREATE TABLE updates (
@@ -903,7 +904,7 @@ method_typ varchar(255),
 class varchar(255)
 );
 
-COPY updates FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/Updates/Updates.csv' CSV HEADER;
+COPY updates FROM '{path_to_csvs}/AccessoryFiles/Updates/Updates.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS zhcn5linguisticvariant;
 CREATE TABLE zhcn5linguisticvariant (
@@ -921,5 +922,5 @@ relatednames2 text,
 linguisticvariantdisplayname varchar(255)
 );
 
-COPY zhcn5linguisticvariant FROM '/Users/mpatel/Desktop/Loinc_2.71/AccessoryFiles/LinguisticVariants/zhCN5LinguisticVariant.csv' CSV HEADER;
+COPY zhcn5linguisticvariant FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/zhCN5LinguisticVariant.csv' CSV HEADER;
 
