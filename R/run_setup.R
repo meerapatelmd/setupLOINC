@@ -45,6 +45,12 @@ run_setup <-
            log_csv_version,
            log_release_date) {
 
+
+    table_csv_map <-
+      list(MapTo = "MapTo.csv",
+           Loinc = "Loinc.csv",
+           SourceOrganization = "SourceOrganization.csv")
+
     if (missing(log_csv_version)|missing(log_release_date)) {
       stop("`log_csv_version` and `log_release_date` are required.")
     }
