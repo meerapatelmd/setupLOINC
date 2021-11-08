@@ -8,6 +8,7 @@ run_setup(
   conn,
   schema = "loinc",
   path_to_csvs,
+  include_linguistic_variants = FALSE,
   verbose = TRUE,
   render_sql = TRUE,
   render_only = FALSE,
@@ -23,6 +24,8 @@ run_setup(
 \item{schema}{Target schema for the LOINC load, Default: 'loinc'}
 
 \item{path_to_csvs}{Path to the unpacked LOINC Table File csv files.}
+
+\item{include_linguistic_variants}{Include \code{LinguisticVariant} tables?}
 
 \item{log_schema}{Schema for the table that logs the process, Default: 'public'}
 

@@ -9,6 +9,7 @@
 #' @param conn Connection to a Postgres database.
 #' @param schema Target schema for the LOINC load, Default: 'loinc'
 #' @param path_to_csvs Path to the unpacked LOINC Table File csv files.
+#' @param include_linguistic_variants Include `LinguisticVariant` tables?
 #' @param log_schema Schema for the table that logs the process, Default: 'public'
 #' @param log_table_name Name of log table, Default: 'setup_loinc_log'
 #' @param log_csv_version (Required) Version number povided in the download page and source zip file name.
@@ -27,6 +28,7 @@ run_setup <-
   function(conn,
            schema = "loinc",
            path_to_csvs,
+           include_linguistic_variants = FALSE,
            verbose = TRUE,
            render_sql = TRUE,
            render_only = FALSE,
@@ -52,6 +54,20 @@ run_setup <-
                verbose = verbose,
                render_sql = render_sql,
                render_only = render_only)
+
+    if (include_linguistic_variants) {
+
+      sql_statement <-
+        glue::glue(paste(readLines(con = system.file(package = "setupLOINC",
+                                                     "sql",
+                                                     "linguisticvariants.sql")), collapse = "\n"))
+      pg13::send(conn = conn,
+                 sql_statement = sql_statement,
+                 verbose = verbose,
+                 render_sql = render_sql,
+                 render_only = render_only)
+
+    }
 
     #Log
         table_names <-

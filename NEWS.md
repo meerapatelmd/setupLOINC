@@ -1,6 +1,8 @@
 # setupLOINC 1.0.0.9000  
 
-* Update `run_setup()` to load complete LOINC zip file folder.  
+* Update `run_setup()` to load complete LOINC zip file folder 
+with the option of including foreign languages (ie Linguistic 
+Variants).  
 
 # setupLOINC 0.0.1
 
