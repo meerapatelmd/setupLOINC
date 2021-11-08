@@ -7,6 +7,7 @@
 #' file version and release dates are taken along with the table names and row
 #' counts are logged to a separate table after the loading is completed.
 #' @param conn Connection to a Postgres database.
+#' @param conn_fun Connection expression.
 #' @param schema Target schema for the LOINC load, Default: 'loinc'
 #' @param path_to_csvs Path to the unpacked LOINC Table File csv files.
 #' @param include_linguistic_variants Include `LinguisticVariant` tables?
@@ -26,6 +27,7 @@
 
 run_setup <-
   function(conn,
+           conn_fun = "pg13::local_connect()",
            schema = "loinc",
            path_to_csvs,
            include_linguistic_variants = FALSE,
@@ -48,6 +50,12 @@ run_setup <-
       glue::glue(paste(readLines(con = system.file(package = "setupLOINC",
                                              "sql",
                                              "load.sql")), collapse = "\n"))
+
+    if (!missing(conn_fun)) {
+      conn <- eval(rlang::parse_expr(conn_fun))
+      on.exit(pg13::dc(conn = conn, verbose = verbose), add = TRUE,
+              after = TRUE)
+    }
 
     pg13::send(conn = conn,
                sql_statement = sql_statement,

@@ -6,6 +6,7 @@
 \usage{
 run_setup(
   conn,
+  conn_fun = "pg13::local_connect()",
   schema = "loinc",
   path_to_csvs,
   include_linguistic_variants = FALSE,
@@ -20,6 +21,8 @@ run_setup(
 }
 \arguments{
 \item{conn}{Connection to a Postgres database.}
+
+\item{conn_fun}{Connection expression.}
 
 \item{schema}{Target schema for the LOINC load, Default: 'loinc'}
 
