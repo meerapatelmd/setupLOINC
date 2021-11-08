@@ -4,6 +4,10 @@
 with the option of including foreign languages (ie Linguistic 
 Variants).  
 
+* Add `get_central_tables()` to get names of non-Linguistic 
+Variant tables.  
+
+
 # setupLOINC 0.0.1
 
 * Added LabCorp mappings as part of package data export as 
