@@ -26,7 +26,7 @@ run_setup(
 
 \item{schema}{Target schema for the LOINC load, Default: 'loinc'}
 
-\item{path_to_csvs}{Path to the unpacked LOINC Table File csv files.}
+\item{path_to_csvs}{Path to the unpacked LOINC download.}
 
 \item{include_linguistic_variants}{Include \code{LinguisticVariant} tables?}
 

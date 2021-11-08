@@ -9,7 +9,7 @@
 #' @param conn Connection to a Postgres database.
 #' @param conn_fun Connection expression.
 #' @param schema Target schema for the LOINC load, Default: 'loinc'
-#' @param path_to_csvs Path to the unpacked LOINC Table File csv files.
+#' @param path_to_csvs Path to the unpacked LOINC download.
 #' @param include_linguistic_variants Include `LinguisticVariant` tables?
 #' @param log_schema Schema for the table that logs the process, Default: 'public'
 #' @param log_table_name Name of log table, Default: 'setup_loinc_log'
