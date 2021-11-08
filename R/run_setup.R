@@ -43,6 +43,12 @@ run_setup <-
       stop("`log_csv_version` and `log_release_date` are required.")
     }
 
+    if (missing(conn)) {
+      conn <- eval(rlang::parse_expr(conn_fun))
+      on.exit(pg13::dc(conn = conn, verbose = verbose), add = TRUE,
+              after = TRUE)
+    }
+
     path_to_csvs <-
       path.expand(path_to_csvs)
 
@@ -50,12 +56,6 @@ run_setup <-
       glue::glue(paste(readLines(con = system.file(package = "setupLOINC",
                                              "sql",
                                              "load.sql")), collapse = "\n"))
-
-    if (missing(conn)) {
-      conn <- eval(rlang::parse_expr(conn_fun))
-      on.exit(pg13::dc(conn = conn, verbose = verbose), add = TRUE,
-              after = TRUE)
-    }
 
     pg13::send(conn = conn,
                sql_statement = sql_statement,
