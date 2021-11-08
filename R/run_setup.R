@@ -51,7 +51,7 @@ run_setup <-
                                              "sql",
                                              "load.sql")), collapse = "\n"))
 
-    if (!missing(conn_fun)) {
+    if (missing(conn)) {
       conn <- eval(rlang::parse_expr(conn_fun))
       on.exit(pg13::dc(conn = conn, verbose = verbose), add = TRUE,
               after = TRUE)
