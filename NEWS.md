@@ -1,8 +1,8 @@
 # setupLOINC 1.1.0.9000 
 
-* 
+## Bugs  
 
-
+* loincchangesnapshot table change reason datatype from varchar to text  
 
 
 # setupLOINC 1.0.0 

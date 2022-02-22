@@ -200,7 +200,7 @@ loinc_num varchar(255),
 property varchar(255),
 valueprior varchar(255),
 valuecurrent varchar(255),
-changereason varchar(255)
+changereason text
 );
 
 COPY loincchangesnapshot FROM '{path_to_csvs}/AccessoryFiles/ChangeSnapshot/LoincChangeSnapshot.csv' CSV HEADER;
