@@ -454,6 +454,7 @@ class varchar(255)
 COPY updates FROM '{path_to_csvs}/AccessoryFiles/Updates/Updates.csv' CSV HEADER;
 
 
+--- Replaces multiaxial hierarchy starting version 2.73
 DROP TABLE IF EXISTS componenthierarchybysystem;
 CREATE TABLE componenthierarchybysystem (
 path_to_root varchar(255),
@@ -463,4 +464,65 @@ code varchar(255),
 code_text varchar(255)
 );
 
-COPY multiaxialhierarchy FROM '{path_to_csvs}/AccessoryFiles/ComponentHierarchyBySystem/ComponentHierarchyBySystem.csv' CSV HEADER;
+COPY componenthierarchybysystem FROM '{path_to_csvs}/AccessoryFiles/ComponentHierarchyBySystem/ComponentHierarchyBySystem.csv' CSV HEADER;
+
+-- New tables as of version 2.73
+DROP TABLE IF EXISTS loinc_group;
+CREATE TABLE loinc_group (
+parentgroupid		varchar(255),
+groupid		varchar(255),
+loinc_group		varchar(255),
+archetype		varchar(255),
+status		varchar(255),
+versionfirstreleased		varchar(255)
+)
+;
+
+COPY loinc_group FROM '{path_to_csvs}/AccessoryFiles/GroupFile/Group.csv' CSV HEADER;
+
+
+DROP TABLE IF EXISTS groupattributes;
+CREATE TABLE groupattributes (
+parentgroupid		varchar(255),
+groupid		varchar(255),
+type		varchar(255),
+value		text
+)
+;
+
+COPY groupattributes FROM '{path_to_csvs}/AccessoryFiles/GroupFile/GroupAttributes.csv' CSV HEADER;
+
+
+DROP TABLE IF EXISTS grouploincterms;
+CREATE TABLE grouploincterms (
+category		varchar(255),
+groupid		varchar(255),
+archetype		varchar(255),
+loincnumber		varchar(255),
+longcommonname		text
+)
+;
+
+COPY grouploincterms FROM '{path_to_csvs}/AccessoryFiles/GroupFile/GroupLoincTerms.csv' CSV HEADER;
+
+
+DROP TABLE IF EXISTS parentgroup;
+CREATE TABLE parentgroup (
+parentgroupid		varchar(255),
+parentgroup		varchar(255),
+status		varchar(255)
+)
+;
+
+COPY parentgroup FROM '{path_to_csvs}/AccessoryFiles/GroupFile/ParentGroup.csv' CSV HEADER;
+
+DROP TABLE IF EXISTS parentgroupattributes;
+CREATE TABLE parentgroupattributes (
+parentgroupid		varchar(255),
+type		varchar(255),
+value		text
+)
+;
+
+COPY parentgroupattributes FROM '{path_to_csvs}/AccessoryFiles/GroupFile/ParentGroupAttributes.csv' CSV HEADER;
+
