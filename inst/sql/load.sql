@@ -452,3 +452,15 @@ class varchar(255)
 );
 
 COPY updates FROM '{path_to_csvs}/AccessoryFiles/Updates/Updates.csv' CSV HEADER;
+
+
+DROP TABLE IF EXISTS componenthierarchybysystem;
+CREATE TABLE componenthierarchybysystem (
+path_to_root varchar(255),
+sequence varchar(255),
+immediate_parent varchar(255),
+code varchar(255),
+code_text varchar(255)
+);
+
+COPY multiaxialhierarchy FROM '{path_to_csvs}/AccessoryFiles/ComponentHierarchyBySystem/ComponentHierarchyBySystem.csv' CSV HEADER;
