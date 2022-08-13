@@ -1,6 +1,6 @@
 Package: setupLOINC
 Title: Load LOINC Into Postgres
-Version: 1.0.0.9000
+Version: 1.1.0
 Authors@R: 
     person(given = "Meera",
            family = "Patel",

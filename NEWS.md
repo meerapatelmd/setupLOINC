@@ -1,4 +1,4 @@
-# setupLOINC 1.1.0.9000 
+# setupLOINC 1.1.0 
 
 ## Bugs  
 
