@@ -351,16 +351,6 @@ comment varchar(255)
 
 COPY mapto FROM '{path_to_csvs}/LoincTableCore/MapTo.csv' CSV HEADER;
 
-DROP TABLE IF EXISTS multiaxialhierarchy;
-CREATE TABLE multiaxialhierarchy (
-path_to_root varchar(255),
-sequence varchar(255),
-immediate_parent varchar(255),
-code varchar(255),
-code_text varchar(255)
-);
-
-COPY multiaxialhierarchy FROM '{path_to_csvs}/AccessoryFiles/MultiAxialHierarchy/MultiAxialHierarchy.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS panelsandforms;
 CREATE TABLE panelsandforms (
