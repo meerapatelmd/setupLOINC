@@ -1,6 +1,6 @@
-# setupLOINC 2.0.0.9000  
+# setupLOINC 3.0.0.9000
 
-
+* Add panelsandforms table  
 
 
 # setupLOINC 1.1.0 
