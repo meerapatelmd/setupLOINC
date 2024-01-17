@@ -24,7 +24,7 @@ description text,
 score varchar(255)
 );
 
-COPY answerlist FROM '{path_to_csvs}/AccessoryFiles/AnswerFile/AnswerList.csv' CSV HEADER;
+COPY answerlist FROM '{path_to_csvs}/AccessoryFiles/AnswerFile/AnswerList.csv' CSV HEADER QUOTE AS '"';
 
 DROP TABLE IF EXISTS consumername;
 CREATE TABLE consumername (
