@@ -112,7 +112,7 @@ validhl7attachmentrequest varchar(255),
 displayname varchar(255)
 );
 
-COPY loinc FROM '{path_to_csvs}/AccessoryFiles/PanelsAndForms/Loinc.csv' CSV HEADER;
+COPY panelsandforms FROM '{path_to_csvs}/AccessoryFiles/PanelsAndForms/Loinc.csv' CSV HEADER;
 
 DROP TABLE IF EXISTS loinc;
 CREATE TABLE loinc (
