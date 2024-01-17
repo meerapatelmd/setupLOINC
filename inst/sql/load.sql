@@ -67,53 +67,6 @@ producer varchar(255)
 
 COPY linguisticvariants FROM '{path_to_csvs}/AccessoryFiles/LinguisticVariants/LinguisticVariants.csv' CSV HEADER;
 
-DROP TABLE IF EXISTS panelsandforms;
-CREATE TABLE panelsandforms (
-loinc_num text,
-component text,
-property text,
-time_aspct text,
-system text,
-scale_typ text,
-method_typ text,
-class text,
-versionlastchanged text,
-chng_type text,
-definitiondescription text,
-status text,
-consumer_name text,
-classtype text,
-formula text,
-exmpl_answers text,
-survey_quest_text text,
-survey_quest_src text,
-unitsrequired text,
-relatednames2 text,
-shortname text,
-order_obs text,
-hl7_field_subfield_id text,
-external_copyright_notice text,
-example_units text,
-long_common_name text,
-example_ucum_units text,
-status_reason text,
-status_text text,
-change_reason_public text,
-common_test_rank text,
-common_order_rank text,
-common_si_test_rank text,
-hl7_attachment_structure text,
-external_copyright_link text,
-paneltype text,
-askatorderentry text,
-associatedobservations text,
-versionfirstreleased text,
-validhl7attachmentrequest text,
-displayname text
-);
-
-COPY panelsandforms FROM '{path_to_csvs}/AccessoryFiles/PanelsAndForms/Loinc.csv' CSV HEADER;
-
 DROP TABLE IF EXISTS loinc;
 CREATE TABLE loinc (
 loinc_num varchar(255),
